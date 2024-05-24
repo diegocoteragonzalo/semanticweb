@@ -1,0 +1,148 @@
+@prefix schema: <http://schema.org/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Definición de los datos para cada año en Asturias
+
+wd:Q3934 a schema:Place ;
+	schema:name "Asturias" ;
+	schema:containedInPlace wd:Q29 ;  # Spain
+	schema:containsPlace [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2006"^^xsd:gYear ;
+    	schema:numberOfUnits 189 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 1060
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2007"^^xsd:gYear ;
+    	schema:numberOfUnits 201 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 1130
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2008"^^xsd:gYear ;
+    	schema:numberOfUnits 227 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 1260
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2009"^^xsd:gYear ;
+    	schema:numberOfUnits 246 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 1354
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2010"^^xsd:gYear ;
+    	schema:numberOfUnits 263 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 1441
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2011"^^xsd:gYear ;
+    	schema:numberOfUnits 273 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 1513
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2012"^^xsd:gYear ;
+    	schema:numberOfUnits 294 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 1678
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2013"^^xsd:gYear ;
+    	schema:numberOfUnits 309 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 1769
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2014"^^xsd:gYear ;
+    	schema:numberOfUnits 325 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 1903
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2015"^^xsd:gYear ;
+    	schema:numberOfUnits 378 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 2175
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2016"^^xsd:gYear ;
+    	schema:numberOfUnits 461 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 2639
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2017"^^xsd:gYear ;
+    	schema:numberOfUnits 649 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 3836
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2018"^^xsd:gYear ;
+    	schema:numberOfUnits 933 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 5619
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2019"^^xsd:gYear ;
+    	schema:numberOfUnits 1142 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 6957
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2020"^^xsd:gYear ;
+    	schema:numberOfUnits 1354 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 8276
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2021"^^xsd:gYear ;
+    	schema:numberOfUnits 1599 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 9667
+    	]
+	], [
+    	a schema:TouristAccommodation ;
+    	schema:datePosted "2022"^^xsd:gYear ;
+    	schema:numberOfUnits 1917 ;
+    	schema:bed [
+        	a schema:BedDetails ;
+        	schema:numberOfBeds 11616
+    	]
+	] .
+
+

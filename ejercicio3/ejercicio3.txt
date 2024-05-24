@@ -1,0 +1,82 @@
+# Consultas SPARQL basadas en el modelo RDF
+
+# Consulta 1: Obtener el número total de unidades de alojamiento turístico por año
+# Esta consulta recupera el número total de unidades de alojamiento turístico para cada año.
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+SELECT ?year (SUM(?units) AS ?totalUnits)
+WHERE {
+  wd:Q3934 schema:containsPlace ?place .
+  ?place a schema:TouristAccommodation ;
+      schema:datePosted ?year ;
+      schema:numberOfUnits ?units .
+}
+GROUP BY ?year
+ORDER BY ?year
+
+# Consulta 2: Obtener el número total de camas de alojamiento turístico por año
+# Esta consulta recupera el número total de camas de alojamiento turístico para cada año.
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+SELECT ?year (SUM(?beds) AS ?totalBeds)
+WHERE {
+  wd:Q3934 schema:containsPlace ?place .
+  ?place a schema:TouristAccommodation ;
+      schema:datePosted ?year ;
+      schema:bed ?bedDetails .
+  ?bedDetails schema:numberOfBeds ?beds .
+}
+GROUP BY ?year
+ORDER BY ?year
+
+# Consulta 3: Obtener el promedio de unidades de alojamiento turístico por año
+# Esta consulta recupera el promedio de unidades de alojamiento turístico para cada año.
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+SELECT ?year (AVG(?units) AS ?avgUnits)
+WHERE {
+  wd:Q3934 schema:containsPlace ?place .
+  ?place a schema:TouristAccommodation ;
+      schema:datePosted ?year ;
+      schema:numberOfUnits ?units .
+}
+GROUP BY ?year
+ORDER BY ?year
+
+# Consulta 4: Obtener el número de unidades y camas de alojamiento turístico para un año específico
+# Esta consulta permite recuperar el número de unidades y camas de alojamiento turístico para un año específico. En este caso, vamos usamos el año 2019 como ejemplo.
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+SELECT ?units ?beds
+WHERE {
+  wd:Q3934 schema:containsPlace ?place .
+  ?place a schema:TouristAccommodation ;
+      schema:datePosted "2019"^^xsd:gYear ;
+      schema:numberOfUnits ?units ;
+      schema:bed ?bedDetails .
+  ?bedDetails schema:numberOfBeds ?beds .
+}
+
+# Consulta 5: Obtener los años con más de 1000 unidades de alojamiento turístico
+# Esta consulta recupera los años en los que el número de unidades de alojamiento turístico es mayor a 1000.
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+SELECT ?year ?units
+WHERE {
+  wd:Q3934 schema:containsPlace ?place .
+  ?place a schema:TouristAccommodation ;
+      schema:datePosted ?year ;
+      schema:numberOfUnits ?units .
+  FILTER(?units > 1000)
+}
+ORDER BY ?year

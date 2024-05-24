@@ -1,5 +1,6 @@
 # semanticweb
 Viviendas vacacionales en el Principado de Asturias: número de establecimientos y plazas
+
 https://data.europa.eu/data/datasets/https-datos-gob-es-catalogo-a03002951-viviendas-vacacionales-establecimientos-y-plazas-segun-categoria-por-concejos?locale=es
 
 

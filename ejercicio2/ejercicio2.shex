@@ -1,0 +1,25 @@
+PREFIX schema: <http://schema.org/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Definición del shape para un lugar (Asturias)
+<PlaceShape> {
+  a [schema:Place] ;
+  schema:name xsd:string ;
+  schema:containedInPlace IRI ;
+  schema:containsPlace @<TouristAccommodationShape>+
+}
+
+# Definición del shape para TouristAccommodation
+<TouristAccommodationShape> {
+  a [schema:TouristAccommodation] ;
+  schema:datePosted xsd:gYear ;
+  schema:numberOfUnits xsd:integer ;
+  schema:bed @<BedDetailsShape>
+}
+
+# Definición del shape para BedDetails
+<BedDetailsShape> {
+  a [schema:BedDetails] ;
+  schema:numberOfBeds xsd:integer
+}
